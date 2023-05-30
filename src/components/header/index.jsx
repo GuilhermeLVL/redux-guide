@@ -1,13 +1,18 @@
 import { useState } from "react";
-
+import { useSelector } from "react-redux";
 // Components
 import Cart from "../cart/index";
 
 // Styles
 import * as Styles from "./styles";
 
+
 function Header() {
   const [cartIsVisible, setCartIsVisible] = useState(false);
+
+  const { currentUser } = useSelector((rootReducer) => rootReducer.userReducer)
+
+  console.log({currentUser});
 
   const handleCartClick = () => {
     setCartIsVisible(true);

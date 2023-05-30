@@ -1,10 +1,10 @@
 const initialState = {
-    currentUser:null,
+    currentUser:65,
 }
 
 const userReducer = (state= initialState, action) => {
     if(action.type == "user/login"){
-        return {...state, currentUser: 10};
+        return { ...state, currentUser: 10};
     }
     return state;
 };
